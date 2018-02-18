@@ -1,0 +1,272 @@
+{
+    "scoreboard": {
+        "lastUpdatedOn": "2018-02-02 2:12:23 AM",
+        "gameScore": [
+            {
+                "game": {
+                    "ID": "42830",
+                    "scheduleStatus": "Normal",
+                    "originalDate": null,
+                    "originalTime": null,
+                    "delayedOrPostponedReason": null,
+                    "date": "2018-02-01",
+                    "time": "7:00PM",
+                    "awayTeam": {
+                        "ID": "81",
+                        "City": "Toronto",
+                        "Name": "Raptors",
+                        "Abbreviation": "TOR"
+                    },
+                    "homeTeam": {
+                        "ID": "94",
+                        "City": "Washington",
+                        "Name": "Wizards",
+                        "Abbreviation": "WAS"
+                    },
+                    "location": "Capital One Arena"
+                },
+                "isUnplayed": "false",
+                "isInProgress": "false",
+                "isCompleted": "true",
+                "awayScore": "119",
+                "homeScore": "122",
+                "quarterSummary": {
+                    "quarter": [
+                        {
+                            "@number": "1",
+                            "awayScore": "34",
+                            "homeScore": "27"
+                        },
+                        {
+                            "@number": "2",
+                            "awayScore": "28",
+                            "homeScore": "28"
+                        },
+                        {
+                            "@number": "3",
+                            "awayScore": "25",
+                            "homeScore": "33"
+                        },
+                        {
+                            "@number": "4",
+                            "awayScore": "32",
+                            "homeScore": "34"
+                        }
+                    ]
+                }
+            },
+            {
+                "game": {
+                    "ID": "42831",
+                    "scheduleStatus": "Normal",
+                    "originalDate": null,
+                    "originalTime": null,
+                    "delayedOrPostponedReason": null,
+                    "date": "2018-02-01",
+                    "time": "7:00PM",
+                    "awayTeam": {
+                        "ID": "107",
+                        "City": "Memphis",
+                        "Name": "Grizzlies",
+                        "Abbreviation": "MEM"
+                    },
+                    "homeTeam": {
+                        "ID": "88",
+                        "City": "Detroit",
+                        "Name": "Pistons",
+                        "Abbreviation": "DET"
+                    },
+                    "location": "The Palace of Auburn Hills"
+                },
+                "isUnplayed": "false",
+                "isInProgress": "false",
+                "isCompleted": "true",
+                "awayScore": "102",
+                "homeScore": "104",
+                "quarterSummary": {
+                    "quarter": [
+                        {
+                            "@number": "1",
+                            "awayScore": "25",
+                            "homeScore": "27"
+                        },
+                        {
+                            "@number": "2",
+                            "awayScore": "26",
+                            "homeScore": "24"
+                        },
+                        {
+                            "@number": "3",
+                            "awayScore": "25",
+                            "homeScore": "31"
+                        },
+                        {
+                            "@number": "4",
+                            "awayScore": "26",
+                            "homeScore": "22"
+                        }
+                    ]
+                }
+            },
+            {
+                "game": {
+                    "ID": "42832",
+                    "scheduleStatus": "Normal",
+                    "originalDate": null,
+                    "originalTime": null,
+                    "delayedOrPostponedReason": null,
+                    "date": "2018-02-01",
+                    "time": "8:00PM",
+                    "awayTeam": {
+                        "ID": "109",
+                        "City": "Houston",
+                        "Name": "Rockets",
+                        "Abbreviation": "HOU"
+                    },
+                    "homeTeam": {
+                        "ID": "106",
+                        "City": "San Antonio",
+                        "Name": "Spurs",
+                        "Abbreviation": "SAS"
+                    },
+                    "location": "AT&T Center"
+                },
+                "isUnplayed": "false",
+                "isInProgress": "false",
+                "isCompleted": "true",
+                "awayScore": "102",
+                "homeScore": "91",
+                "quarterSummary": {
+                    "quarter": [
+                        {
+                            "@number": "1",
+                            "awayScore": "27",
+                            "homeScore": "14"
+                        },
+                        {
+                            "@number": "2",
+                            "awayScore": "27",
+                            "homeScore": "24"
+                        },
+                        {
+                            "@number": "3",
+                            "awayScore": "28",
+                            "homeScore": "32"
+                        },
+                        {
+                            "@number": "4",
+                            "awayScore": "20",
+                            "homeScore": "21"
+                        }
+                    ]
+                }
+            },
+            {
+                "game": {
+                    "ID": "42833",
+                    "scheduleStatus": "Normal",
+                    "originalDate": null,
+                    "originalTime": null,
+                    "delayedOrPostponedReason": null,
+                    "date": "2018-02-01",
+                    "time": "8:00PM",
+                    "awayTeam": {
+                        "ID": "90",
+                        "City": "Milwaukee",
+                        "Name": "Bucks",
+                        "Abbreviation": "MIL"
+                    },
+                    "homeTeam": {
+                        "ID": "100",
+                        "City": "Minnesota",
+                        "Name": "Timberwolves",
+                        "Abbreviation": "MIN"
+                    },
+                    "location": "Target Center"
+                },
+                "isUnplayed": "false",
+                "isInProgress": "false",
+                "isCompleted": "true",
+                "awayScore": "89",
+                "homeScore": "108",
+                "quarterSummary": {
+                    "quarter": [
+                        {
+                            "@number": "1",
+                            "awayScore": "17",
+                            "homeScore": "23"
+                        },
+                        {
+                            "@number": "2",
+                            "awayScore": "22",
+                            "homeScore": "37"
+                        },
+                        {
+                            "@number": "3",
+                            "awayScore": "22",
+                            "homeScore": "19"
+                        },
+                        {
+                            "@number": "4",
+                            "awayScore": "28",
+                            "homeScore": "29"
+                        }
+                    ]
+                }
+            },
+            {
+                "game": {
+                    "ID": "42834",
+                    "scheduleStatus": "Normal",
+                    "originalDate": null,
+                    "originalTime": null,
+                    "delayedOrPostponedReason": null,
+                    "date": "2018-02-01",
+                    "time": "10:30PM",
+                    "awayTeam": {
+                        "ID": "96",
+                        "City": "Oklahoma City",
+                        "Name": "Thunder",
+                        "Abbreviation": "OKL"
+                    },
+                    "homeTeam": {
+                        "ID": "99",
+                        "City": "Denver",
+                        "Name": "Nuggets",
+                        "Abbreviation": "DEN"
+                    },
+                    "location": "Pepsi Center"
+                },
+                "isUnplayed": "false",
+                "isInProgress": "false",
+                "isCompleted": "true",
+                "awayScore": "124",
+                "homeScore": "127",
+                "quarterSummary": {
+                    "quarter": [
+                        {
+                            "@number": "1",
+                            "awayScore": "33",
+                            "homeScore": "40"
+                        },
+                        {
+                            "@number": "2",
+                            "awayScore": "24",
+                            "homeScore": "32"
+                        },
+                        {
+                            "@number": "3",
+                            "awayScore": "32",
+                            "homeScore": "32"
+                        },
+                        {
+                            "@number": "4",
+                            "awayScore": "35",
+                            "homeScore": "23"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
