@@ -41,5 +41,69 @@ class TestGetNbaData(unittest.TestCase):
         self.assertEqual(test_scores['scoreboard']['lastUpdatedOn'], "2018-02-02 2:12:23 AM")
 
 
+class TestGetNflData(unittest.TestCase):
+
+    def setUp(self):
+        self.test_nfl = GetNfl()
+
+    def test_auth(self):
+        self.assertEqual(type(self.test_nfl.feed.api_instance.auth), tuple)
+
+    @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
+    def test_basic_api_call(self, mock_get):
+        mock_get.return_value = json.load(open('resources/test_data_nfl.json'))
+        test_scores = self.test_nfl.get_scores("nfl", "current", "scoreboard")
+        self.assertEqual(test_scores['scoreboard']['lastUpdatedOn'], "2018-02-02 2:12:23 AM")
+
+    @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
+    def test_get_nfl_call(self, mock_get):
+        mock_get.return_value = json.load(open('resources/test_data_nfl.json'))
+        test_scores = self.test_nfl.get_current_scores()
+        self.assertEqual(test_scores['scoreboard']['lastUpdatedOn'], "2018-02-02 2:12:23 AM")
+
+
+class TestGetNhlData(unittest.TestCase):
+
+    def setUp(self):
+        self.test_nhl = GetNhl()
+
+    def test_auth(self):
+        self.assertEqual(type(self.test_nhl.feed.api_instance.auth), tuple)
+
+    @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
+    def test_basic_api_call(self, mock_get):
+        mock_get.return_value = json.load(open('resources/test_data_nhl.json'))
+        test_scores = self.test_nhl.get_scores("nhl", "current", "scoreboard")
+        self.assertEqual(test_scores['scoreboard']['lastUpdatedOn'], "2018-02-02 2:12:23 AM")
+
+    @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
+    def test_get_nfl_call(self, mock_get):
+        mock_get.return_value = json.load(open('resources/test_data_nhl.json'))
+        test_scores = self.test_nhl.get_current_scores()
+        self.assertEqual(test_scores['scoreboard']['lastUpdatedOn'], "2018-02-02 2:12:23 AM")
+
+
+class TestGetNflData(unittest.TestCase):
+
+    def setUp(self):
+        self.test_mlb = GetNfl()
+
+    def test_auth(self):
+        self.assertEqual(type(self.test_mlb.feed.api_instance.auth), tuple)
+
+    @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
+    def test_basic_api_call(self, mock_get):
+        mock_get.return_value = json.load(open('resources/test_data_mlb.json'))
+        test_scores = self.test_mlb.get_scores("mlb", "current", "scoreboard")
+        self.assertEqual(test_scores['scoreboard']['lastUpdatedOn'], "2018-02-02 2:12:23 AM")
+
+    @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
+    def test_get_mlb_call(self, mock_get):
+        mock_get.return_value = json.load(open('resources/test_data_mlb.json'))
+        test_scores = self.test_mlb.get_current_scores()
+        self.assertEqual(test_scores['scoreboard']['lastUpdatedOn'], "2018-02-02 2:12:23 AM")
+
+
+
 if __name__ == '__main__':
     unittest.main()
