@@ -31,7 +31,7 @@ class TestGetNbaData(unittest.TestCase):
     @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
     def test_basic_api_call(self, mock_get):
         mock_get.return_value = json.load(open('resources/test_data_nba.json'))
-        test_scores = self.test_nba.get_scores("nba", "current", "scoreboard")
+        test_scores = self.test_nba.get_data("nba", "current", "scoreboard")
         self.assertEqual(test_scores['scoreboard']['lastUpdatedOn'], "2018-02-02 2:12:23 AM")
 
     @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
@@ -52,7 +52,7 @@ class TestGetNflData(unittest.TestCase):
     @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
     def test_basic_api_call(self, mock_get):
         mock_get.return_value = json.load(open('resources/test_data_nfl.json'))
-        test_scores = self.test_nfl.get_scores("nfl", "current", "scoreboard")
+        test_scores = self.test_nfl.get_data("nfl", "current", "scoreboard")
         self.assertEqual(test_scores['scoreboard']['lastUpdatedOn'], "2018-02-02 2:12:23 AM")
 
     @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
@@ -73,7 +73,7 @@ class TestGetNhlData(unittest.TestCase):
     @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
     def test_basic_api_call(self, mock_get):
         mock_get.return_value = json.load(open('resources/test_data_nhl.json'))
-        test_scores = self.test_nhl.get_scores("nhl", "current", "scoreboard")
+        test_scores = self.test_nhl.get_data("nhl", "current", "scoreboard")
         self.assertEqual(test_scores['scoreboard']['lastUpdatedOn'], "2018-02-02 2:12:23 AM")
 
     @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
@@ -94,7 +94,7 @@ class TestGetNflData(unittest.TestCase):
     @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')
     def test_basic_api_call(self, mock_get):
         mock_get.return_value = json.load(open('resources/test_data_mlb.json'))
-        test_scores = self.test_mlb.get_scores("mlb", "current", "scoreboard")
+        test_scores = self.test_mlb.get_data("mlb", "current", "scoreboard")
         self.assertEqual(test_scores['scoreboard']['lastUpdatedOn'], "2018-02-02 2:12:23 AM")
 
     @patch('sports_feeds.get_data.MySportsFeeds.msf_get_data')

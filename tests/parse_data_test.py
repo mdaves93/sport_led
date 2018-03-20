@@ -13,7 +13,7 @@ class TestParseScores(unittest.TestCase):
         test_data.close()
 
     def test_get_score_list(self):
-        scores = self.data.get_game_list()
+        scores = self.data.get_score_list()
         print(scores[0].game.awayTeam.Name)
         self.assertIsInstance(scores, list)
 
@@ -24,7 +24,7 @@ class TestParseScores(unittest.TestCase):
         self.assertEqual(team.score, 'score')
 
     def test_simplify_list(self):
-        simple_list = self.data.simplify_list()
+        simple_list = self.data.format_score_list()
         self.assertIsInstance(simple_list, list)
         self.assertIsInstance(simple_list[0], str)
 
