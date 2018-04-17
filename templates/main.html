@@ -39,19 +39,35 @@
     <body>
     {% if page_type == 'home' %}
     <h3>This is the home page</h3>
-    {% else %}
-        <h3>Display Options</h3>
-        <form name="myForm" action="" method="post" onsubmit="">
-            <p>
-                <input id="toggle-one" type="checkbox" data-toggle="toggle" > Scores <br>
-                {% for stat in stats %}
-                <input type="checkbox"  data-toggle="toggle"> {{ stat }} <br>
-                {% endfor %}
-            </p>
-        </form>
+    <div class="row">
+        {% for sport, stats in sports.items() %}
+        <div class="column">
+        <h4 class="SportOptions">Options {{ sport }}</h4>
+            <form name="myForm" action="" method="post" onsubmit="">
+                <p>
+                    <input type="checkbox" id="ckbCheckAll" data-toggle="toggle" > All <br>
+                    <p id="checkBoxes">
+                        <input id="toggle-score" class="checkBoxClass" type="checkbox" data-toggle="toggle" checked> Scores
+                        <br/>
+                        {% for stat in stats %}
+                        <input id="toggle-{{ stat[0] }}" type="checkbox"  class="checkBoxClass" data-toggle="toggle" value="{{ stat[1] }}"> {{ stat[0] }}
+                        <br/>
+                        {% endfor %}
+                    </p>
+                </p>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+    <form action="/change_display" method="post" onsubmit="">
+    <div class="DisplyButton">
+        <input type="submit" value="Display">
+    </div>
+    </form>
     {% endif %}
-    </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<script src="/static/use_this.min.js"></script>
+</body>
 </html>
 

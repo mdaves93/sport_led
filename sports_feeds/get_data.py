@@ -9,7 +9,7 @@ from datetime import datetime
 
 class GetData:
 
-    def __init__(self):
+    def __init__(self, stats):
         self.temp_file = tempfile.TemporaryFile()
         self.logger = logging.getLogger()
         self.logger.setLevel(logging.INFO)
@@ -17,16 +17,16 @@ class GetData:
         self.password = os.environ['sport_password']
         self.feed = MySportsFeeds(version="1.2", store_type=None)
         self.feed.authenticate(self.user_name, self.password)
+        self.stats = stats
+        self.stat_data = None
+        self.score_data = None
 
     def get_data(self, league, season, wanted_feed, for_date='', return_format='json', player_stats=''):
         if for_date is '':
             for_date = self.format_current_date()
-        # try:
         results = self.feed.msf_get_data(league=league, season=season, feed=wanted_feed,
                                          fordate=for_date, format=return_format, force=True,
                                          playerstats=player_stats)
-        # except Exception:
-        #     return None
 
         self.logger.debug(results)
         return json.dumps(results)
@@ -41,47 +41,71 @@ class GetData:
 
 class GetNba(GetData):
 
-    def __init__(self):
-        GetData.__init__(self)
+    def __init__(self, stats):
+        GetData.__init__(self, stats)
 
-    def get_current_scores(self, league="nba", season="current", feed='scoreboard'):
-        return self.get_data(league, season, feed)
+    def get_current_scores(self, league="nba", season="latest", feed='scoreboard'):
+        self.score_data = self.get_data(league, season, feed)
+        return json.loads(self.score_data)
 
-    def get_stats(self, league="nba", season="current", feed='cumulative_player_stats', player_stats="PTS,AST,REB,BS,STL,3PM"):
-        return self.get_data(league=league, season=season, wanted_feed=feed, player_stats=player_stats)
+    def get_stats(self, league="nba", season="latest", feed='cumulative_player_stats'):
+        self.stat_data = self.get_data(league=league, season=season, wanted_feed=feed, player_stats=self.stats)
+        return json.loads(self.stat_data)
+
+    def get_chosen_data(self):
+        self.get_current_scores()
+        self.get_stats()
 
 
 class GetNhl(GetData):
 
-    def __init__(self):
-        GetData.__init__(self)
+    def __init__(self, stats):
+        GetData.__init__(self, stats)
 
-    def get_current_scores(self, league="nhl", season="current", feed='scoreboard'):
-        return self.get_data(league, season, feed)
+    def get_current_scores(self, league="nhl", season="latest", feed='scoreboard'):
+        self.score_data = self.get_data(league, season, feed)
+        return json.loads(self.score_data)
 
-    def get_stats(self):
-        return True
+    def get_stats(self, league="nhl", season="latest", feed='cumulative_player_stats'):
+        self.stat_data = self.get_data(league=league, season=season, wanted_feed=feed, player_stats=self.stats)
+        return json.loads(self.stat_data)
+
+    def get_chosen_data(self):
+        self.get_current_scores()
+        self.get_stats()
 
 
 class GetNfl(GetData):
 
-    def __init__(self):
-        GetData.__init__(self)
+    def __init__(self, stats):
+        GetData.__init__(self, stats)
 
-    def get_current_scores(self, league="nfl", season="current", feed='scoreboard'):
-        return self.get_data(league, season, feed)
+    def get_current_scores(self, league="nfl", season="latest", feed='scoreboard'):
+        self.score_data = self.get_data(league, season, feed)
+        return json.loads(self.score_data)
 
-    def get_stats(self):
-        return True
+    def get_stats(self, league="nfl", season="latest", feed='cumulative_player_stats'):
+        self.stat_data = self.get_data(league=league, season=season, wanted_feed=feed, player_stats=self.stats)
+        return json.loads(self.stat_data)
+
+    def get_chosen_data(self):
+        self.get_current_scores()
+        self.get_stats()
 
 
 class GetMlb(GetData):
 
-    def __init__(self):
-        GetData.__init__(self)
+    def __init__(self, stats):
+        GetData.__init__(self, stats)
 
-    def get_current_scores(self, league="mlb", season="current", feed='scoreboard'):
-        return self.get_data(league, season, feed)
+    def get_current_scores(self, league="mlb", season="latest", feed='scoreboard'):
+        self.score_data = self.get_data(league, season, feed)
+        return json.loads(self.score_data)
 
-    def get_stats(self):
-        return True
+    def get_stats(self, league="mlb", season="latest", feed='cumulative_player_stats'):
+        self.stat_data = self.get_data(league=league, season=season, wanted_feed=feed, player_stats=self.stats)
+        return json.loads(self.stat_data)
+
+    def get_chosen_data(self):
+        self.get_current_scores()
+        self.get_stats()

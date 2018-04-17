@@ -1,1 +1,655 @@
-{"scoreboard":{"lastUpdatedOn":"2018-01-25 5:43:05 PM","gameScore":[{"game":{"ID":"40527","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"1:00PM","awayTeam":{"ID":"48","City":"Buffalo","Name":"Bills","Abbreviation":"BUF"},"homeTeam":{"ID":"73","City":"Kansas City","Name":"Chiefs","Abbreviation":"KC"},"location":"Arrowhead Stadium"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"16","homeScore":"10","quarterSummary":{"quarter":[{"@number":"1","awayScore":"7","homeScore":"0"},{"@number":"2","awayScore":"6","homeScore":"3"},{"@number":"3","awayScore":"3","homeScore":"7"},{"@number":"4","awayScore":"0","homeScore":"0"}]}},{"game":{"ID":"40528","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"1:00PM","awayTeam":{"ID":"67","City":"Tennessee","Name":"Titans","Abbreviation":"TEN"},"homeTeam":{"ID":"65","City":"Indianapolis","Name":"Colts","Abbreviation":"IND"},"location":"Lucas Oil Stadium"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"20","homeScore":"16","quarterSummary":{"quarter":[{"@number":"1","awayScore":"6","homeScore":"0"},{"@number":"2","awayScore":"0","homeScore":"13"},{"@number":"3","awayScore":"7","homeScore":"3"},{"@number":"4","awayScore":"7","homeScore":"0"}]}},{"game":{"ID":"40529","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"1:00PM","awayTeam":{"ID":"58","City":"Cleveland","Name":"Browns","Abbreviation":"CLE"},"homeTeam":{"ID":"57","City":"Cincinnati","Name":"Bengals","Abbreviation":"CIN"},"location":"Paul Brown Stadium"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"16","homeScore":"30","quarterSummary":{"quarter":[{"@number":"1","awayScore":"3","homeScore":"7"},{"@number":"2","awayScore":"3","homeScore":"9"},{"@number":"3","awayScore":"3","homeScore":"7"},{"@number":"4","awayScore":"7","homeScore":"7"}]}},{"game":{"ID":"40530","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"1:00PM","awayTeam":{"ID":"71","City":"Tampa Bay","Name":"Buccaneers","Abbreviation":"TB"},"homeTeam":{"ID":"68","City":"Atlanta","Name":"Falcons","Abbreviation":"ATL"},"location":"Mercedes-Benz Stadium"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"20","homeScore":"34","quarterSummary":{"quarter":[{"@number":"1","awayScore":"3","homeScore":"3"},{"@number":"2","awayScore":"3","homeScore":"17"},{"@number":"3","awayScore":"7","homeScore":"7"},{"@number":"4","awayScore":"7","homeScore":"7"}]}},{"game":{"ID":"40531","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"1:00PM","awayTeam":{"ID":"49","City":"Miami","Name":"Dolphins","Abbreviation":"MIA"},"homeTeam":{"ID":"50","City":"New England","Name":"Patriots","Abbreviation":"NE"},"location":"Gillette Stadium"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"17","homeScore":"35","quarterSummary":{"quarter":[{"@number":"1","awayScore":"0","homeScore":"14"},{"@number":"2","awayScore":"10","homeScore":"7"},{"@number":"3","awayScore":"0","homeScore":"7"},{"@number":"4","awayScore":"7","homeScore":"7"}]}},{"game":{"ID":"40532","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"1:00PM","awayTeam":{"ID":"60","City":"Chicago","Name":"Bears","Abbreviation":"CHI"},"homeTeam":{"ID":"54","City":"Philadelphia","Name":"Eagles","Abbreviation":"PHI"},"location":"Lincoln Financial Field"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"3","homeScore":"31","quarterSummary":{"quarter":[{"@number":"1","awayScore":"0","homeScore":"7"},{"@number":"2","awayScore":"0","homeScore":"17"},{"@number":"3","awayScore":"3","homeScore":"0"},{"@number":"4","awayScore":"0","homeScore":"7"}]}},{"game":{"ID":"43396","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"1:00PM","awayTeam":{"ID":"69","City":"Carolina","Name":"Panthers","Abbreviation":"CAR"},"homeTeam":{"ID":"51","City":"New York","Name":"Jets","Abbreviation":"NYJ"},"location":"MetLife Stadium"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"35","homeScore":"27","quarterSummary":{"quarter":[{"@number":"1","awayScore":"3","homeScore":"3"},{"@number":"2","awayScore":"9","homeScore":"7"},{"@number":"3","awayScore":"6","homeScore":"7"},{"@number":"4","awayScore":"17","homeScore":"10"}]}},{"game":{"ID":"40534","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"4:05PM","awayTeam":{"ID":"70","City":"New Orleans","Name":"Saints","Abbreviation":"NO"},"homeTeam":{"ID":"77","City":"Los Angeles","Name":"Rams","Abbreviation":"LA"},"location":"Los Angeles Memorial Coliseum"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"20","homeScore":"26","quarterSummary":{"quarter":[{"@number":"1","awayScore":"7","homeScore":"10"},{"@number":"2","awayScore":"3","homeScore":"7"},{"@number":"3","awayScore":"0","homeScore":"3"},{"@number":"4","awayScore":"10","homeScore":"6"}]}},{"game":{"ID":"40535","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"4:05PM","awayTeam":{"ID":"79","City":"Seattle","Name":"Seahawks","Abbreviation":"SEA"},"homeTeam":{"ID":"78","City":"San Francisco","Name":"49ers","Abbreviation":"SF"},"location":"Levi's Stadium"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"24","homeScore":"13","quarterSummary":{"quarter":[{"@number":"1","awayScore":"0","homeScore":"0"},{"@number":"2","awayScore":"7","homeScore":"3"},{"@number":"3","awayScore":"7","homeScore":"3"},{"@number":"4","awayScore":"10","homeScore":"7"}]}},{"game":{"ID":"40536","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"4:25PM","awayTeam":{"ID":"66","City":"Jacksonville","Name":"Jaguars","Abbreviation":"JAX"},"homeTeam":{"ID":"76","City":"Arizona","Name":"Cardinals","Abbreviation":"ARI"},"location":"University of Phoenix Stadium"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"24","homeScore":"27","quarterSummary":{"quarter":[{"@number":"1","awayScore":"0","homeScore":"3"},{"@number":"2","awayScore":"3","homeScore":"10"},{"@number":"3","awayScore":"7","homeScore":"3"},{"@number":"4","awayScore":"14","homeScore":"11"}]}},{"game":{"ID":"40537","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"4:25PM","awayTeam":{"ID":"72","City":"Denver","Name":"Broncos","Abbreviation":"DEN"},"homeTeam":{"ID":"74","City":"Oakland","Name":"Raiders","Abbreviation":"OAK"},"location":"Oakland-Alameda County Coliseum"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"14","homeScore":"21","quarterSummary":{"quarter":[{"@number":"1","awayScore":"0","homeScore":"0"},{"@number":"2","awayScore":"0","homeScore":"14"},{"@number":"3","awayScore":"0","homeScore":"7"},{"@number":"4","awayScore":"14","homeScore":"0"}]}},{"game":{"ID":"40538","week":"12","scheduleStatus":"Normal","originalDate":null,"originalTime":null,"delayedOrPostponedReason":null,"date":"2017-11-26","time":"8:30PM","awayTeam":{"ID":"62","City":"Green Bay","Name":"Packers","Abbreviation":"GB"},"homeTeam":{"ID":"59","City":"Pittsburgh","Name":"Steelers","Abbreviation":"PIT"},"location":"Heinz Field"},"isUnplayed":"false","isInProgress":"false","isCompleted":"true","awayScore":"28","homeScore":"31","quarterSummary":{"quarter":[{"@number":"1","awayScore":"14","homeScore":"6"},{"@number":"2","awayScore":"0","homeScore":"8"},{"@number":"3","awayScore":"7","homeScore":"7"},{"@number":"4","awayScore":"7","homeScore":"10"}]}}]}}
+{
+  "scoreboard": {
+    "lastUpdatedOn": "2018-01-25 5:43:05 PM",
+    "gameScore": [
+      {
+        "game": {
+          "ID": "40527",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "1:00PM",
+          "awayTeam": {
+            "ID": "48",
+            "City": "Buffalo",
+            "Name": "Bills",
+            "Abbreviation": "BUF"
+          },
+          "homeTeam": {
+            "ID": "73",
+            "City": "Kansas City",
+            "Name": "Chiefs",
+            "Abbreviation": "KC"
+          },
+          "location": "Arrowhead Stadium"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "16",
+        "homeScore": "10",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "7",
+              "homeScore": "0"
+            },
+            {
+              "@number": "2",
+              "awayScore": "6",
+              "homeScore": "3"
+            },
+            {
+              "@number": "3",
+              "awayScore": "3",
+              "homeScore": "7"
+            },
+            {
+              "@number": "4",
+              "awayScore": "0",
+              "homeScore": "0"
+            }
+          ]
+        }
+      },
+      {
+        "game": {
+          "ID": "40528",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "1:00PM",
+          "awayTeam": {
+            "ID": "67",
+            "City": "Tennessee",
+            "Name": "Titans",
+            "Abbreviation": "TEN"
+          },
+          "homeTeam": {
+            "ID": "65",
+            "City": "Indianapolis",
+            "Name": "Colts",
+            "Abbreviation": "IND"
+          },
+          "location": "Lucas Oil Stadium"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "20",
+        "homeScore": "16",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "6",
+              "homeScore": "0"
+            },
+            {
+              "@number": "2",
+              "awayScore": "0",
+              "homeScore": "13"
+            },
+            {
+              "@number": "3",
+              "awayScore": "7",
+              "homeScore": "3"
+            },
+            {
+              "@number": "4",
+              "awayScore": "7",
+              "homeScore": "0"
+            }
+          ]
+        }
+      },
+      {
+        "game": {
+          "ID": "40529",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "1:00PM",
+          "awayTeam": {
+            "ID": "58",
+            "City": "Cleveland",
+            "Name": "Browns",
+            "Abbreviation": "CLE"
+          },
+          "homeTeam": {
+            "ID": "57",
+            "City": "Cincinnati",
+            "Name": "Bengals",
+            "Abbreviation": "CIN"
+          },
+          "location": "Paul Brown Stadium"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "16",
+        "homeScore": "30",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "3",
+              "homeScore": "7"
+            },
+            {
+              "@number": "2",
+              "awayScore": "3",
+              "homeScore": "9"
+            },
+            {
+              "@number": "3",
+              "awayScore": "3",
+              "homeScore": "7"
+            },
+            {
+              "@number": "4",
+              "awayScore": "7",
+              "homeScore": "7"
+            }
+          ]
+        }
+      },
+      {
+        "game": {
+          "ID": "40530",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "1:00PM",
+          "awayTeam": {
+            "ID": "71",
+            "City": "Tampa Bay",
+            "Name": "Buccaneers",
+            "Abbreviation": "TB"
+          },
+          "homeTeam": {
+            "ID": "68",
+            "City": "Atlanta",
+            "Name": "Falcons",
+            "Abbreviation": "ATL"
+          },
+          "location": "Mercedes-Benz Stadium"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "20",
+        "homeScore": "34",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "3",
+              "homeScore": "3"
+            },
+            {
+              "@number": "2",
+              "awayScore": "3",
+              "homeScore": "17"
+            },
+            {
+              "@number": "3",
+              "awayScore": "7",
+              "homeScore": "7"
+            },
+            {
+              "@number": "4",
+              "awayScore": "7",
+              "homeScore": "7"
+            }
+          ]
+        }
+      },
+      {
+        "game": {
+          "ID": "40531",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "1:00PM",
+          "awayTeam": {
+            "ID": "49",
+            "City": "Miami",
+            "Name": "Dolphins",
+            "Abbreviation": "MIA"
+          },
+          "homeTeam": {
+            "ID": "50",
+            "City": "New England",
+            "Name": "Patriots",
+            "Abbreviation": "NE"
+          },
+          "location": "Gillette Stadium"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "17",
+        "homeScore": "35",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "0",
+              "homeScore": "14"
+            },
+            {
+              "@number": "2",
+              "awayScore": "10",
+              "homeScore": "7"
+            },
+            {
+              "@number": "3",
+              "awayScore": "0",
+              "homeScore": "7"
+            },
+            {
+              "@number": "4",
+              "awayScore": "7",
+              "homeScore": "7"
+            }
+          ]
+        }
+      },
+      {
+        "game": {
+          "ID": "40532",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "1:00PM",
+          "awayTeam": {
+            "ID": "60",
+            "City": "Chicago",
+            "Name": "Bears",
+            "Abbreviation": "CHI"
+          },
+          "homeTeam": {
+            "ID": "54",
+            "City": "Philadelphia",
+            "Name": "Eagles",
+            "Abbreviation": "PHI"
+          },
+          "location": "Lincoln Financial Field"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "3",
+        "homeScore": "31",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "0",
+              "homeScore": "7"
+            },
+            {
+              "@number": "2",
+              "awayScore": "0",
+              "homeScore": "17"
+            },
+            {
+              "@number": "3",
+              "awayScore": "3",
+              "homeScore": "0"
+            },
+            {
+              "@number": "4",
+              "awayScore": "0",
+              "homeScore": "7"
+            }
+          ]
+        }
+      },
+      {
+        "game": {
+          "ID": "43396",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "1:00PM",
+          "awayTeam": {
+            "ID": "69",
+            "City": "Carolina",
+            "Name": "Panthers",
+            "Abbreviation": "CAR"
+          },
+          "homeTeam": {
+            "ID": "51",
+            "City": "New York",
+            "Name": "Jets",
+            "Abbreviation": "NYJ"
+          },
+          "location": "MetLife Stadium"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "35",
+        "homeScore": "27",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "3",
+              "homeScore": "3"
+            },
+            {
+              "@number": "2",
+              "awayScore": "9",
+              "homeScore": "7"
+            },
+            {
+              "@number": "3",
+              "awayScore": "6",
+              "homeScore": "7"
+            },
+            {
+              "@number": "4",
+              "awayScore": "17",
+              "homeScore": "10"
+            }
+          ]
+        }
+      },
+      {
+        "game": {
+          "ID": "40534",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "4:05PM",
+          "awayTeam": {
+            "ID": "70",
+            "City": "New Orleans",
+            "Name": "Saints",
+            "Abbreviation": "NO"
+          },
+          "homeTeam": {
+            "ID": "77",
+            "City": "Los Angeles",
+            "Name": "Rams",
+            "Abbreviation": "LA"
+          },
+          "location": "Los Angeles Memorial Coliseum"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "20",
+        "homeScore": "26",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "7",
+              "homeScore": "10"
+            },
+            {
+              "@number": "2",
+              "awayScore": "3",
+              "homeScore": "7"
+            },
+            {
+              "@number": "3",
+              "awayScore": "0",
+              "homeScore": "3"
+            },
+            {
+              "@number": "4",
+              "awayScore": "10",
+              "homeScore": "6"
+            }
+          ]
+        }
+      },
+      {
+        "game": {
+          "ID": "40535",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "4:05PM",
+          "awayTeam": {
+            "ID": "79",
+            "City": "Seattle",
+            "Name": "Seahawks",
+            "Abbreviation": "SEA"
+          },
+          "homeTeam": {
+            "ID": "78",
+            "City": "San Francisco",
+            "Name": "49ers",
+            "Abbreviation": "SF"
+          },
+          "location": "Levi's Stadium"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "24",
+        "homeScore": "13",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "0",
+              "homeScore": "0"
+            },
+            {
+              "@number": "2",
+              "awayScore": "7",
+              "homeScore": "3"
+            },
+            {
+              "@number": "3",
+              "awayScore": "7",
+              "homeScore": "3"
+            },
+            {
+              "@number": "4",
+              "awayScore": "10",
+              "homeScore": "7"
+            }
+          ]
+        }
+      },
+      {
+        "game": {
+          "ID": "40536",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "4:25PM",
+          "awayTeam": {
+            "ID": "66",
+            "City": "Jacksonville",
+            "Name": "Jaguars",
+            "Abbreviation": "JAX"
+          },
+          "homeTeam": {
+            "ID": "76",
+            "City": "Arizona",
+            "Name": "Cardinals",
+            "Abbreviation": "ARI"
+          },
+          "location": "University of Phoenix Stadium"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "24",
+        "homeScore": "27",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "0",
+              "homeScore": "3"
+            },
+            {
+              "@number": "2",
+              "awayScore": "3",
+              "homeScore": "10"
+            },
+            {
+              "@number": "3",
+              "awayScore": "7",
+              "homeScore": "3"
+            },
+            {
+              "@number": "4",
+              "awayScore": "14",
+              "homeScore": "11"
+            }
+          ]
+        }
+      },
+      {
+        "game": {
+          "ID": "40537",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "4:25PM",
+          "awayTeam": {
+            "ID": "72",
+            "City": "Denver",
+            "Name": "Broncos",
+            "Abbreviation": "DEN"
+          },
+          "homeTeam": {
+            "ID": "74",
+            "City": "Oakland",
+            "Name": "Raiders",
+            "Abbreviation": "OAK"
+          },
+          "location": "Oakland-Alameda County Coliseum"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "14",
+        "homeScore": "21",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "0",
+              "homeScore": "0"
+            },
+            {
+              "@number": "2",
+              "awayScore": "0",
+              "homeScore": "14"
+            },
+            {
+              "@number": "3",
+              "awayScore": "0",
+              "homeScore": "7"
+            },
+            {
+              "@number": "4",
+              "awayScore": "14",
+              "homeScore": "0"
+            }
+          ]
+        }
+      },
+      {
+        "game": {
+          "ID": "40538",
+          "week": "12",
+          "scheduleStatus": "Normal",
+          "originalDate": null,
+          "originalTime": null,
+          "delayedOrPostponedReason": null,
+          "date": "2017-11-26",
+          "time": "8:30PM",
+          "awayTeam": {
+            "ID": "62",
+            "City": "Green Bay",
+            "Name": "Packers",
+            "Abbreviation": "GB"
+          },
+          "homeTeam": {
+            "ID": "59",
+            "City": "Pittsburgh",
+            "Name": "Steelers",
+            "Abbreviation": "PIT"
+          },
+          "location": "Heinz Field"
+        },
+        "isUnplayed": "false",
+        "isInProgress": "false",
+        "isCompleted": "true",
+        "awayScore": "28",
+        "homeScore": "31",
+        "quarterSummary": {
+          "quarter": [
+            {
+              "@number": "1",
+              "awayScore": "14",
+              "homeScore": "6"
+            },
+            {
+              "@number": "2",
+              "awayScore": "0",
+              "homeScore": "8"
+            },
+            {
+              "@number": "3",
+              "awayScore": "7",
+              "homeScore": "7"
+            },
+            {
+              "@number": "4",
+              "awayScore": "7",
+              "homeScore": "10"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
