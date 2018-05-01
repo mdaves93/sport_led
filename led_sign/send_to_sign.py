@@ -11,11 +11,13 @@ class SendToSign:
 
     def queue_data(self, string_data):
         self.sign = MiniSign(devicetype='sign')
+        print(self.sign.SLOTRANGE)
         if len(string_data) < 256:
             self.sign.queuemsg(data=string_data, speed=1, effect='hold')
         else:
-            i = 0
+            i = 1
             length = len(string_data)
+            print(length)
             start = 0
             end = 252
             while True:
@@ -30,11 +32,3 @@ class SendToSign:
 
     def send_data(self):
         self.sign.sendqueue(device='/dev/ttyUSB0')
-
-    # def queue_data(self, data):
-    #     data = self.split_into_nine(data)
-    #     for i in data:
-    #         for score in i:
-    #             self.sign.queuemsg(data=score, speed=1, effect='hold')
-    #         self.sign.sendqueue(device='/dev/ttyUSB0')
-    #         sleep(60)

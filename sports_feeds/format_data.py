@@ -17,7 +17,8 @@ class FormatScores(object):
         simple_list = []
         for game in game_list:
             if game["isUnplayed"] == 'true':
-                teams = ' {:3s}{:4s}{:3s} '.format(game["game"]["homeTeam"]["Abbreviation"], ' ', game["game"]["awayTeam"]["Abbreviation"])
+                teams = ' {:3s}{:4s}{:3s} '.format(game["game"]["homeTeam"]["Abbreviation"], ' ',
+                                                   game["game"]["awayTeam"]["Abbreviation"])
                 simple_list.append(teams)
                 time = '{:^12}'.format(game["game"]["time"])
                 simple_list.append(time)
@@ -78,7 +79,7 @@ class FormatNflStats(FormatStats):
                     passing_stats["Passing" + player.get("stats").get(stat).get("@abbreviation")].append(
                         (player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
         for stat in passing_stats:
-            passing_stats[stat] = sorted(passing_stats[stat], key=lambda tup: float(tup[1]), reverse=True)[:5]
+            passing_stats[stat] = sorted(passing_stats[stat], key=lambda tup: int(tup[1]), reverse=True)[:5]
         return passing_stats
 
     def format_rushing_stats(self):
@@ -93,7 +94,7 @@ class FormatNflStats(FormatStats):
                     rushing_stats["Rushing" + player.get("stats").get(stat).get("@abbreviation")].append(
                         (player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
         for stat in rushing_stats:
-            rushing_stats[stat] = sorted(rushing_stats[stat], key=lambda tup: float(tup[1]), reverse=True)[:5]
+            rushing_stats[stat] = sorted(rushing_stats[stat], key=lambda tup: int(tup[1]), reverse=True)[:5]
         return rushing_stats
 
     def format_receiving_stats(self):
@@ -108,7 +109,7 @@ class FormatNflStats(FormatStats):
                     receiving_stats["Receiving" + player.get("stats").get(stat).get("@abbreviation")].append(
                         (player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
         for stat in receiving_stats:
-            receiving_stats[stat] = sorted(receiving_stats[stat], key=lambda tup: float(tup[1]), reverse=True)[:5]
+            receiving_stats[stat] = sorted(receiving_stats[stat], key=lambda tup: int(tup[1]), reverse=True)[:5]
         return receiving_stats
 
     def format_defensive_stats(self):
@@ -134,7 +135,7 @@ class FormatNflStats(FormatStats):
                         (player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
 
         for stat in defence_stats:
-            defence_stats[stat] = sorted(defence_stats[stat], key=lambda tup: float(tup[1]), reverse=True)[:5]
+            defence_stats[stat] = sorted(defence_stats[stat], key=lambda tup: int(tup[1]), reverse=True)[:5]
         return defence_stats
 
 
@@ -142,14 +143,26 @@ class FormatMlbStats(FormatStats):
 
     def __init__(self, stats):
         FormatStats.__init__(self, stats)
-        self.max_games = 0
+        self.max_games = self.max_games_played()
+        self.max_innings_pitched = self.max_innings_pitched()
+        self.eligible_games = int(self.max_games) * 0.75
+        self.eligible_pitcher = float(self.max_innings_pitched) * 0.5
 
     def format_all_stats(self):
         self.stat_dict = {**self.format_batting_stats(), **self.format_pitching_stats()}
         return self.stat_dict
 
     def max_games_played(self):
-        self.max_games = [int(x["stats"]["GamesPlayed"]["#text"]) for x in self.stats] 
+        return max([int(x["stats"]["GamesPlayed"]["#text"]) for x in self.stats])
+
+    def max_innings_pitched(self):
+        max_games_started = 0
+        pitching_list = set([])
+        for player in self.stats:
+            if player.get("stats").get("InningsPitched"):
+                pitching_list.add(float(player.get("stats").get("InningsPitched").get("#text")))
+        max_games_started = max(pitching_list)
+        return max_games_started
 
     def format_batting_stats(self):
         batting_stats = {}
@@ -158,25 +171,37 @@ class FormatMlbStats(FormatStats):
                 if player.get("stats").get(stat).get("@category") == "Batting":
                     if batting_stats.get(stat) is None:
                         batting_stats[stat] = []
-
-                    batting_stats[stat].append((player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
+                    if float(player.get("stats").get("GamesPlayed").get("#text")) >= self.eligible_games:
+                        batting_stats[stat].append((player.get("player").get("LastName"),
+                                                    player.get("stats").get(stat).get("#text")))
         for stat in batting_stats:
             batting_stats[stat] = sorted(batting_stats[stat], key=lambda tup: float(tup[1]), reverse=True)[:5]
         return batting_stats
 
     def format_pitching_stats(self):
-        batting_stats = {}
+        pitching_stats = {}
         for player in self.stats:
             for stat in player.get("stats"):
-
                 if player.get("stats").get(stat).get("@category") == "Pitching":
-                    if batting_stats.get(stat) is None:
-                        batting_stats[stat] = []
-
-                    batting_stats[stat].append((player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
-        for stat in batting_stats:
-            batting_stats[stat] = sorted(batting_stats[stat], key=lambda tup: float(tup[1]), reverse=True)[:5]
-        return batting_stats
+                    print(self.eligible_pitcher)
+                    if pitching_stats.get(stat) is None:
+                        pitching_stats[stat] = []
+                    if stat == "EarnedRunAvg" and float(player.get("stats").get("InningsPitched")
+                                                            .get("#text")) > self.eligible_pitcher:
+                        print(self.eligible_pitcher)
+                        pitching_stats[stat].append(
+                            (player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
+                        continue
+                    elif stat == "EarnedRunAvg":
+                        continue
+                    pitching_stats[stat].append(
+                        (player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
+        for stat in pitching_stats:
+            if stat == "EarnedRunAvg":
+                pitching_stats[stat] = sorted(pitching_stats[stat], key=lambda tup: float(tup[1]), reverse=False)[:5]
+            else:
+                pitching_stats[stat] = sorted(pitching_stats[stat], key=lambda tup: float(tup[1]), reverse=True)[:5]
+        return pitching_stats
 
 
 class FormatNbaStats(FormatStats):
@@ -196,9 +221,10 @@ class FormatNbaStats(FormatStats):
                 if nba_stats.get(stat) is None:
                     nba_stats[stat] = []
 
-                nba_stats[stat].append((player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
+                nba_stats[stat].append(
+                    (player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
         for stat in nba_stats:
-            nba_stats[stat] = sorted(nba_stats[stat], key=lambda tup: float(tup[1]), reverse=True)[:5]
+            nba_stats[stat] = sorted(nba_stats[stat], key=lambda tup: int(float(tup[1])), reverse=True)[:5]
         return nba_stats
 
 
@@ -218,7 +244,8 @@ class FormatNhlStats(FormatStats):
                 if nhl_stats.get(stat) is None:
                     nhl_stats[stat] = []
 
-                nhl_stats[stat].append((player.get("player").get("LastName"), player.get("stats").get("stats").get(stat).get("#text")))
+                nhl_stats[stat].append(
+                    (player.get("player").get("LastName"), player.get("stats").get("stats").get(stat).get("#text")))
         for stat in nhl_stats:
-            nhl_stats[stat] = sorted(nhl_stats[stat], key=lambda tup: float(tup[1]), reverse=True)[:5]
+            nhl_stats[stat] = sorted(nhl_stats[stat], key=lambda tup: int(float(tup[1])), reverse=True)[:5]
         return nhl_stats

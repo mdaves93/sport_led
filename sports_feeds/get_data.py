@@ -9,7 +9,7 @@ from datetime import datetime
 
 class GetData:
 
-    def __init__(self, stats):
+    def __init__(self, stats=None):
         self.temp_file = tempfile.TemporaryFile()
         self.logger = logging.getLogger()
         self.logger.setLevel(logging.INFO)
@@ -41,7 +41,7 @@ class GetData:
 
 class GetNba(GetData):
 
-    def __init__(self, stats):
+    def __init__(self, stats=None):
         GetData.__init__(self, stats)
 
     def get_current_scores(self, league="nba", season="latest", feed='scoreboard'):
@@ -59,7 +59,7 @@ class GetNba(GetData):
 
 class GetNhl(GetData):
 
-    def __init__(self, stats):
+    def __init__(self, stats=None):
         GetData.__init__(self, stats)
 
     def get_current_scores(self, league="nhl", season="latest", feed='scoreboard'):
@@ -77,7 +77,7 @@ class GetNhl(GetData):
 
 class GetNfl(GetData):
 
-    def __init__(self, stats):
+    def __init__(self, stats=None):
         GetData.__init__(self, stats)
 
     def get_current_scores(self, league="nfl", season="latest", feed='scoreboard'):
@@ -95,7 +95,7 @@ class GetNfl(GetData):
 
 class GetMlb(GetData):
 
-    def __init__(self, stats):
+    def __init__(self, stats=None):
         GetData.__init__(self, stats)
 
     def get_current_scores(self, league="mlb", season="latest", feed='scoreboard'):
