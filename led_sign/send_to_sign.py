@@ -1,5 +1,6 @@
 from pyledsign.minisign import MiniSign
 import logging
+import unidecode
 from time import sleep
 
 
@@ -11,24 +12,24 @@ class SendToSign:
 
     def queue_data(self, string_data):
         self.sign = MiniSign(devicetype='sign')
-        print(self.sign.SLOTRANGE)
-        if len(string_data) < 256:
-            self.sign.queuemsg(data=string_data, speed=1, effect='hold')
+        new_string = unidecode.unidecode(string_data)
+        if len(new_string) < 256:
+            self.sign.queuemsg(data=new_string, speed=1, effect='hold')
         else:
-            i = 1
-            length = len(string_data)
-            print(length)
+            length = len(new_string)
             start = 0
             end = 252
-            while True:
+            for i in range(1, 9):
                 if end > length:
-                    self.sign.queuemsg(data=string_data[start:length], speed=1, effect='hold')
+                    self.sign.queuemsg(data=new_string[start:length], speed=1, effect='hold')
                     break
-                self.sign.queuemsg(data=string_data[start:end], speed=1, effect='hold')
-                start = end
-                end = end * i
-                i += 1
-        self.logger.info(string_data)
+                self.sign.queuemsg(data=new_string[start:end], speed=1, effect='hold')
+                print(i)
+                print(new_string[start:end])
+                start += 252
+                end += 252
+
+        self.logger.info(new_string)
 
     def send_data(self):
         self.sign.sendqueue(device='/dev/ttyUSB0')

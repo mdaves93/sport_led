@@ -20,52 +20,38 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/mlb">MLB</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/nfl">NFL</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/nba">NBA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/nhl">NHL</a>
-                </li>
             </ul>
         </div>
     </nav>
 </body>
     <body>
     {% if page_type == 'home' %}
-    <h3>This is the home page</h3>
+
+    <form name="myForm" action="/submit" method="post" onsubmit="">
     <div class="row">
         {% for sport, stats in sports.items() %}
         <div class="column">
-        <h4 class="SportOptions">Options {{ sport }}</h4>
-            <form name="myForm" action="" method="post" onsubmit="">
-                <p>
-                    <input type="checkbox" id="ckbCheckAll" data-toggle="toggle" > All <br>
+            <h4 class="SportOptions">{{ sport }}</h4>
                     <p id="checkBoxes">
-                        <input id="toggle-score" class="checkBoxClass" type="checkbox" data-toggle="toggle" checked> Scores
+                        <input name="{{ sport }}Score" id="toggle-score" class="{{ sport }}Score" type="checkbox" data-toggle="toggle" checked value='true'> Scores
                         <br/>
                         {% for stat in stats %}
-                        <input id="toggle-{{ stat[0] }}" type="checkbox"  class="checkBoxClass" data-toggle="toggle" value="{{ stat[1] }}"> {{ stat[0] }}
+                        <input name="{{ sport }}" id="toggle-{{ stat[0] }}" type="checkbox"  class="{{ sport }}" data-toggle="toggle" value="{{ stat[1] }}"> {{ stat[0] }}
                         <br/>
                         {% endfor %}
                     </p>
-                </p>
-            </form>
         </div>
-        {% endfor %}
-    </div>
-    <form action="/change_display" method="post" onsubmit="">
-    <div class="DisplyButton">
-        <input type="submit" value="Display">
+    {% endfor %}
+        <div class="DisplyButton">
+            <p>
+                <input name="submit" type="submit" value="Display">
+            </p>
+        </div>
     </div>
     </form>
     {% endif %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 <script src="/static/use_this.min.js"></script>
 </body>

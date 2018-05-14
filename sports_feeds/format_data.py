@@ -17,8 +17,8 @@ class FormatScores(object):
         simple_list = []
         for game in game_list:
             if game["isUnplayed"] == 'true':
-                teams = ' {:3s}{:4s}{:3s} '.format(game["game"]["homeTeam"]["Abbreviation"], ' ',
-                                                   game["game"]["awayTeam"]["Abbreviation"])
+                teams = ' {:3s}{:1s}@{:2s}{:3s} '.format(game["game"]["homeTeam"]["Abbreviation"], ' ', ' ',
+                                                         game["game"]["awayTeam"]["Abbreviation"])
                 simple_list.append(teams)
                 time = '{:^12}'.format(game["game"]["time"])
                 simple_list.append(time)
@@ -170,7 +170,10 @@ class FormatMlbStats(FormatStats):
             for stat in player.get("stats"):
                 if player.get("stats").get(stat).get("@category") == "Batting":
                     if batting_stats.get(stat) is None:
-                        batting_stats[stat] = []
+                        if stat is "BatterStrikeouts":
+                            batting_stats["BatterSO"] = []
+                        else:
+                            batting_stats[stat] = []
                     if float(player.get("stats").get("GamesPlayed").get("#text")) >= self.eligible_games:
                         batting_stats[stat].append((player.get("player").get("LastName"),
                                                     player.get("stats").get(stat).get("#text")))
@@ -183,12 +186,13 @@ class FormatMlbStats(FormatStats):
         for player in self.stats:
             for stat in player.get("stats"):
                 if player.get("stats").get(stat).get("@category") == "Pitching":
-                    print(self.eligible_pitcher)
                     if pitching_stats.get(stat) is None:
-                        pitching_stats[stat] = []
+                        if stat is "PitcherStrikeouts":
+                            pitching_stats["PitcherSO"] = []
+                        else:
+                            pitching_stats[stat] = []
                     if stat == "EarnedRunAvg" and float(player.get("stats").get("InningsPitched")
-                                                            .get("#text")) > self.eligible_pitcher:
-                        print(self.eligible_pitcher)
+                                                        .get("#text")) > self.eligible_pitcher:
                         pitching_stats[stat].append(
                             (player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
                         continue
