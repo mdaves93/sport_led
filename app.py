@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+import json
 from flask import url_for
 from flask import request
 
@@ -13,11 +14,11 @@ def home():
                       ("ReceivingYds", "YDS"), ("ReceivingTD", "TD"), ("Interceptions", "INT"),
                       ("Tackles", "Total"), ("Sacks", "Sacks")],
               "MLB": [("BattingAvg", "AVG"), ("HomeRuns", "HR"), ("RBI", "RBI"), ("Hits", "H"), ("BatterSO", "SO"),
-                      ("BatterWalks", "BB"), ("Steals", "STL"), ("ERA", "ERA"), ("Wins", "W"), ("PitcherSO", "SO"),
+                      ("BatterWalks", "BB"), ("StolenBases", "SB"), ("ERA", "ERA"), ("Wins", "W"), ("PitcherSO", "SO"),
                       ("PitcherWalks", "BB"), ("Saves", "SV")],
-              "NBA": [("Points", "P"), ("Assists", "AST"), ("Steals", "STL"), ("Blocks", "BS"), ("Rebounds", "REB"),
+              "NBA": [("Points", "PTS"), ("Assists", "AST"), ("Steals", "STL"), ("Blocks", "BS"), ("Rebounds", "REB"),
                       ("3 Points Made", "3PM")],
-              "NHL": [("Goals", "G"), ("Assists", "A"), ("Points", "Pts"), ("HatTricks", "Hat"), ("Shut Outs", "SO")]}
+              "NHL": [("Goals", "G"), ("Assists", "A"), ("Points", "PTS"), ("HatTricks", "Hat"), ("Shut Outs", "SO")]}
 
     return render_template('main.html', page_type=page_type, sports=sports)
 
@@ -26,7 +27,35 @@ def home():
 def submit():
     print(request.form.getlist("MLB"))
     print(request.form.getlist("MLBScore"))
-    
+    if request.form.getlist("MLB"):
+        mlb_stats = ",".join(set(request.form.getlist("MLB")))
+    else:
+        mlb_stats = None
+    if request.form.getlist("NFL"):
+        nfl_stats = ",".join(set(request.form.getlist("NFL")))
+    else:
+        nfl_stats = None
+    if request.form.getlist("NBA"):
+        nba_stats = ",".join(set(request.form.getlist("NBA")))
+    else:
+        nba_stats = None
+    if request.form.getlist("NHL"):
+        nhl_stats = ",".join(set(request.form.getlist("NHL")))
+    else:
+        nhl_stats = None
+
+    json_string = {"MLB": {"scores": request.form.getlist("MLBScore"),
+                        "stats": mlb_stats},
+                "NFL": {"scores": request.form.getlist("NFLScore"),
+                        "stats": nfl_stats},
+                "NBA": {"scores": request.form.getlist("NBAScore"),
+                        "stats": nba_stats},
+                "NHL": {"scores": request.form.getlist("NHLScore"),
+                        "stats": nhl_stats}
+                }
+
+    with open('resources/parameters.json', 'w') as f:
+        json.dump(json_string, f)
     return home()
 
 

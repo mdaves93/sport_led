@@ -15,7 +15,7 @@ class GetData:
         self.logger.setLevel(logging.INFO)
         self.user_name = os.environ['sport_user']
         self.password = os.environ['sport_password']
-        self.feed = MySportsFeeds(version="1.2", store_type=None)
+        self.feed = MySportsFeeds(version="1.1", store_type=None)
         self.feed.authenticate(self.user_name, self.password)
         self.stats = stats
         self.stat_data = None
@@ -27,7 +27,7 @@ class GetData:
         results = self.feed.msf_get_data(league=league, season=season, feed=wanted_feed,
                                          fordate=for_date, format=return_format, force=True,
                                          playerstats=player_stats)
-
+        self.logger.info(player_stats)
         self.logger.debug(results)
         return json.dumps(results)
 

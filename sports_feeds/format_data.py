@@ -135,7 +135,7 @@ class FormatNflStats(FormatStats):
                         (player.get("player").get("LastName"), player.get("stats").get(stat).get("#text")))
 
         for stat in defence_stats:
-            defence_stats[stat] = sorted(defence_stats[stat], key=lambda tup: int(tup[1]), reverse=True)[:5]
+            defence_stats[stat] = sorted(defence_stats[stat], key=lambda tup: int(float(tup[1])), reverse=True)[:5]
         return defence_stats
 
 
@@ -168,6 +168,7 @@ class FormatMlbStats(FormatStats):
         batting_stats = {}
         for player in self.stats:
             for stat in player.get("stats"):
+                print(player.get("stats").get(stat))
                 if player.get("stats").get(stat).get("@category") == "Batting":
                     if batting_stats.get(stat) is None:
                         if stat is "BatterStrikeouts":

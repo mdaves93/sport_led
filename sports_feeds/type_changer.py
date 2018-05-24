@@ -3,7 +3,7 @@ class Changer:
     @staticmethod
     def dict_to_list(stat_dict, wanted_stats=("PassingYds", "PassingTD", "RushingYds", "RushingTD", "ReceivingYds",
                                               "ReceivingTD", "Interceptions", "TackleTotal", "Sacks" "BattingAvg",
-                                              "HomeRuns", "RunsBattedIn", "Hits", "BatterSO", "BatterWalks", "Steals",
+                                              "HomeRuns", "RunsBattedIn", "Hits", "BatterSO", "BatterWalks", "StolenBases",
                                               "EarnedRunAvg", "Wins", "PitcherSO", "PitcherWalks", "Saves", "Pts",
                                               "Ast", "Stl", "Blk", "Reb", "Fg3PtMade", "Goals", "Assists", "Points",
                                               "HatTricks", "Shutouts")):
