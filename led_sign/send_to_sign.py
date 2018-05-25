@@ -24,8 +24,6 @@ class SendToSign:
                     self.sign.queuemsg(data=new_string[start:length], speed=1, effect='hold')
                     break
                 self.sign.queuemsg(data=new_string[start:end], speed=1, effect='hold')
-                print(i)
-                print(new_string[start:end])
                 start += 252
                 end += 252
 

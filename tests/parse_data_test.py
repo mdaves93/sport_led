@@ -40,7 +40,6 @@ class TestParseStats(unittest.TestCase):
 
     def test_get_stats(self):
         stats = self.data.get_stat_list()
-        print(stats)
         self.assertIs(True)
 
     def test_dict_to_list(self):

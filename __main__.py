@@ -103,16 +103,12 @@ if __name__ == '__main__':
         with open("resources/parameters.json") as f:
             parameters = json.load(f)
             f.close()
-        print(parameters)
-        print(parameters["NHL"]["stats"])
         driver_class = Main(nfl_scores=parameters["NFL"]["scores"], nfl_stats=parameters["NFL"]["stats"],
                             mlb_scores=parameters["MLB"]["scores"], mlb_stats=parameters["MLB"]["stats"],
                             nba_scores=parameters["NBA"]["scores"], nba_stats=parameters["NBA"]["stats"],
                             nhl_scores=parameters["NHL"]["scores"], nhl_stats=parameters["NHL"]["stats"])
         data = driver_class.collect_all()
-        print(data)
         sign.queue_data(data)
         sign.send_data()
         sleep_time = (len(data) / 4.5)
-        print(sleep_time)
         time.sleep(sleep_time)

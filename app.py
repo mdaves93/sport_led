@@ -25,8 +25,6 @@ def home():
 
 @app.route('/submit', methods=["POST"])
 def submit():
-    print(request.form.getlist("MLB"))
-    print(request.form.getlist("MLBScore"))
     if request.form.getlist("MLB"):
         mlb_stats = ",".join(set(request.form.getlist("MLB")))
     else:
