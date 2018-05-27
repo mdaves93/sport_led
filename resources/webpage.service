@@ -1,0 +1,14 @@
+[Unit]
+Description=SportStatWebPage
+After=network.target
+
+[Service]
+Type=forked
+User=sport
+group=sport
+WorkingDirectory=/opt/sportsTicker
+ExecStart=/opt/sportsTicker/app.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
